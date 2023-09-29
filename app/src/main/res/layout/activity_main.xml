@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imageViewPay"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/wallet_rafiki" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewPay"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/colorPrimary"
+            app:startIconDrawable="@drawable/person"
+            app:startIconTint="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Name"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textInputName"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/colorPrimary"
+            app:startIconDrawable="@drawable/mail"
+            app:startIconTint="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Email"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputAmount"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textInputEmail"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/colorPrimary"
+            app:startIconDrawable="@drawable/account_balance"
+            app:startIconTint="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Amount"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textInputAmount"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_button"
+            android:text="Pay"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webViewPay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>
